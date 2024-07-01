@@ -1,0 +1,26 @@
+<nav class="main-navbar <%= defined_theme %>">
+  <div class="nav-container d-flex justify-content-between align-items-center">
+    <%= link_to root_path do %>
+      <%= render "shared/logo" %>
+    <% end %>
+    <% if user_signed_in? %>
+      <ul class="d-flex gap-5 align-items-center">
+         <li class="<%= active_class(rooms_path) %>"><%= link_to "All rooms", rooms_path, class: "" %></li>
+         <li class="<%= active_class(about_us_path) %>"><%= link_to "About us", about_us_path, class: "" %></li>
+      </ul>
+      <div class="nav-item dropdown">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ismaeljouhariperez", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+          <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+        </div>
+      </div>
+    <% else %>
+      <div class="d-flex gap-3">
+        <ul class="d-flex gap-5 align-items-center">
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</nav>
