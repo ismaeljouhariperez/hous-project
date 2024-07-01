@@ -1,0 +1,112 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+h2{
+  font-size: 3rem;
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+
+  border: none;
+  background-color: var(--primary);
+  &:hover, &:disabled, &:visited {
+    background-color: var(--secondary);
+  }
+}
+
+.btn-secondary {
+  transition: all 0.3s ease;
+  border: solid 2px var(--secondary);
+  background-color: transparent;
+  color: var(--secondary);
+  &:hover, &:disabled, &:visited {
+    background-color: var(--secondary);
+    color: white;
+    border: solid 2px transparent;
+  }
+}
+
+.btn-alt {
+  background-color: var(--tertiary);
+  &:hover, &:disabled, &:visited {
+    background-color: var(--tertiary-light);
+  }
+}
+
+.btn-primary, .btn-secondary, .btn-alt {
+  border-radius: 50px;
+}
+
+.btn-primary-alt {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--body-color-light);
+  &:hover, &:disabled, &:visited {
+    background-color: var(--secondary);
+    color: var(--body-color-light);
+  }
+}
