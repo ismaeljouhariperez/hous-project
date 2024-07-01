@@ -1,0 +1,53 @@
+// This is where you override default Bootstrap variables
+// 1. Find all Bootstrap variables that you can override at the end of each component's documentation under the `Sass variables` anchor
+// e.g. here are the ones you can override for the navbar https://getbootstrap.com/docs/5.2/components/navbar/#sass-variables
+// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+// 3. You can override them below!
+
+// General style
+$font-family-sans-serif: $body-font;
+$headings-font-family:   $headers-font;
+//$body-bg:                $light-gray;
+$font-size-base:         1rem;
+
+// Colors
+//$body-color: $gray;
+//$primary:    $blue;
+//$success:    $green;
+//$info:       $yellow;
+//$danger:     $red;
+//$warning:    $orange;
+
+// Buttons & inputs' radius
+//$border-radius:    2px;
+//$border-radius-lg: 2px;
+//$border-radius-sm: 2px;
+
+// Override other variables below!
+//$border-radius-sm: .0625rem;
+//$border-radius:    2px;
+//$border-radius-lg: .25rem;
+//$border-radius-xl: .5rem;
+//$border-radius-xxl: 1rem;
+
+:root {
+  --body-bg: #fff;
+  --body-color-light: #F3F3FA;
+  --body-color-dark: #0D0D0D;
+  --primary: #E78068;
+  --secondary: #EA9783;
+  --tertiary: #4764C3;
+  --tertiary-lighter: lighten(--tertiary, 30%);
+  --tertiary-light: #6B7BCC;
+  --yellow: #FFC65A;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --dark: #354065;
+  --white: #fff;
+  --light-gray: #E9EBF0;
+  --lighter-gray: #D0D0D0;
+  --more-light-gray: #f6f6f6;
+  --gray: #586174;
+}
