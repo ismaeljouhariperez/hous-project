@@ -1,0 +1,5 @@
+<%= simple_form_for [room, booking] do |f| %>
+  <%= f.input :starts_at, as: :string, label: "Check-in", input_html: { data: { controller: 'flatpickr' } } %>
+  <%= f.input :ends_at, as: :string, label: "Check-out", input_html: { data: { controller: 'flatpickr' } } %>
+  <%= f.button :submit, 'Book Room', class: "btn btn-primary" %>
+<% end %>
