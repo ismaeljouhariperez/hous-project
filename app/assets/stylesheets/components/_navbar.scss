@@ -1,0 +1,46 @@
+.main-navbar {
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+
+  height:80px;
+  align-items: center;
+
+  .nav-container{
+    grid-column: 2 / 12;
+  }
+
+  svg {
+    width: 100px;
+    transition: all 0.3s ease;
+    &:hover {
+      filter: blur(1px);
+    }
+  }
+  ul{
+    li{
+      padding: 10px 15px;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      a{
+        transition: color 0.3s ease;
+      }
+      &:hover, &.active {
+        background-color: var(--secondary);
+        color: var(--body-color-light);
+        a{
+          color: var(--body-color-light);
+        }
+      }
+    }
+  }
+}
+
+.main-navbar.main_theme {
+  background-color: var(--tertiary);
+  ul{
+    li{
+      color: var(--body-color-light);
+    }
+  }
+}
