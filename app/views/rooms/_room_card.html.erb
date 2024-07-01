@@ -1,0 +1,25 @@
+
+<div class="room-card <%= class_name %>">
+  <div class="room-card__image">
+    <img src="https://images.unsplash.com/photo-1568495248636-6432b97bd949?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Room hostel image">
+  </div>
+  <div class="room-card__content">
+    <div class="room-card__header">
+      <h5>A room with a view in <%= room.hotel.name %></h5>
+    </div>
+    <div class="room-card__footer">
+      <div class="room-card__price">
+        <span class="room-card__price-value">€<%= room.price_per_night.round %> (<strike>120€</strike>)</span>
+        <span class="room-card__price-label">per night</span>
+      </div>
+      <div class="room-card__capacity">
+        <span class="room-card__capacity-value"><%= room.capacity %></span>
+        <span class="room-card__capacity-label"><%= room.capacity == 1 ? "guest" : "guests" %></span>
+      </div>
+      <div class="room-card__book">
+        <%= link_to "Book now", room_path(room), class: "btn btn-primary-alt" %>
+      </div>
+    </div>
+  </div>
+
+</div>

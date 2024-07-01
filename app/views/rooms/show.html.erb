@@ -1,0 +1,47 @@
+<div class="container my-2 mx-auto">
+  <div class="row justify-content-center text-center">
+      <%= link_to rooms_path do %>
+        <button class="btn btn-secondary px-3 py-2 my-4"><i class="fas fa-arrow-left"></i> Back to all rooms</button>
+      <% end %>
+  </div>
+</div>
+
+<div class="booking-container">
+  <h2 class="text-center">A room with a view at <%= @room.hotel.name %></h2>
+  <div class="booking-container__image">
+    <img src="https://images.unsplash.com/photo-1621891333885-66f833b348ba?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Room hostel image">
+    <div class="booking-container__infos w-100">
+      <div class="booking-container__infos__location d-flex align-items-center gap-2">
+        <i class="fas fa-map-marker-alt "></i><em>Paris</em>
+      </div>
+      <div class="booking-container__infos__time d-flex align-items-center gap-2">
+        <i class="fas fa-clock"></i><em>10:00 AM - 11:00 PM</em>
+      </div>
+      <div class="booking-container__infos__price d-flex align-items-center gap-2">
+        <i class="fas fa-money-bill-alt"></i><em><%= @room.price_per_night.round %> €/night</em>
+      </div>
+      <div class="booking-container__infos__capacity d-flex align-items-center gap-2">
+        <i class="fas fa-users"></i><em><%= @room.capacity %></em>
+      </div>
+      <div class="booking-container__infos__room d-flex align-items-center gap-2">
+        <em>Room <i class="fas fa-hashtag"></i><%= @room.id %></em>
+      </div>
+    </div>
+  </div>
+  <div class="booking-container__form">
+    <%= render 'rooms/booking_form', room: @room, booking: @booking %>
+  </div>
+</div>
+
+
+<div class="hotel-container">
+  <h2>About the <%= @room.hotel.name %> hotel</h2>
+  <div class="hotel-container__text">
+    <p>Nestled in the heart of Barcelona's vibrant cultural tapestry, Gaudi Getaway Inn offers an enchanting retreat just steps from the city's famed architectural marvels and bustling street life.</p>
+    <p>
+      The Gaudi Getaway Inn exudes a modern charm that harmonizes with the city's historic flair, providing guests with an oasis of comfort amidst the urban excitement. Each room is a testament to contemporary luxury, featuring minimalist decor that highlights clean lines and neutral tones, complemented by modern amenities designed to cater to both leisure and business travelers.</p>
+    <p>
+      Our exceptional rooms not only offer supreme comfort but also boast unique views of the city's skyline, punctuated by Gaudi's intricate spires and the Mediterranean Sea's shimmering expanse.
+    </p>
+  </div>
+</div>

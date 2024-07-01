@@ -1,0 +1,25 @@
+<div class="container my-2 mx-auto">
+  <div class="row justify-content-center text-center">
+    <%= link_to root_path do %>
+      <button class="btn btn-secondary px-3 py-2 my-4"><i class="fas fa-arrow-left"></i> Back to homepage</button>
+    <% end %>
+  </div>
+</div>
+
+<div class="container my-5 mx-auto">
+  <div class="row justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-6">
+      <h2 class="text-center">All our discounted rooms</h2>
+      <p class="text-center">Explore a wide range of room options tailored to your preferences. Filter, compare, and find the best stay at competitive prices.</p>
+    </div>
+    <div class="row my-4 ">
+      <% @rooms.each do |room| %>
+        <%= render 'rooms/room_card', room: room, class_name: "small" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
