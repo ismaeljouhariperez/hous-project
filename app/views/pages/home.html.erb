@@ -1,0 +1,44 @@
+<div class="hero-container">
+  <div class="hero-content">
+    <h1>Affordable Comfort, Wherever You Go.</h1>
+  </div>
+  <div class="hero-image">
+    <img src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?q=80&w=3571&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="User profile picture">
+  </div>
+  <div class="hero-footer">
+    <em>Discover rooms at clear, flat rates. Choose from our €40 standard or €60 luxury accommodations in top cities like Madrid and Barcelona.</em>
+  </div>
+</div>
+
+<div class="latest-offers">
+  <div class="latest-offers__header">
+    <h2>Latest offers</h2>
+    <%= link_to rooms_path do %>
+      <button class="btn btn-primary px-3 py-2">See all rooms</button>
+    <% end %>
+  </div>
+  <div class="latest-offers__content">
+    <p>Experience comfort and style with Hous latest property selections — all at unbeatable prices that make every stay feel like home.</p>
+  </div>
+  <div class="latest-offers__cards">
+    <% @rooms.each do |room| %>
+      <%= render 'rooms/room_card', room:room, class_name: "standard" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="about-us mt-4">
+  <div class="about-us__text">
+    <div class="about-us__text__content">
+      <h3>Offering homely accommodations at competitive prices, we make every city feel like home.</h3>
+      <%= link_to about_us_path do %>
+        <button class="btn btn-primary py-2 w-50">Read more</button>
+      <% end %>
+    </div>
+  </div>
+  <div class="about-us__image">
+    <img src="https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?q=80&w=2835&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About us image">
+  </div>
+</div>
+
+
